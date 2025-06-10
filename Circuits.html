@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circuits</title>
+    <link rel="stylesheet" href="Circuits.css">
+    
+</head>
+<body>
+    <style>
+        body{
+            background-image: url(circuit2.jpg);
+            background-repeat: no-repeat;
+            text-align: center;
+            margin-top: auto;
+            margin-right: 0px;
+            margin-left: 0px;
+
+        }
+        
+        @keyframes fadeOutPhrase {
+            from { opacity : 0; transform: translateY(50px);}
+            to { opacity: 1; transform: translateY(0);}
+        }
+
+        h2{
+            color: rgba(195, 70, 25, 0.59);
+            font-size: 50px;
+            font-family:italic;
+            opacity: 0;
+            animation: fadeOutPhrase 2s forwards;
+            
+        }
+        .sitraka{
+            font-size: 22px;
+            font-style: italic;
+            color: #0c25b1;
+        }
+
+        p{
+            font-size: 18px;
+            font-style: italic;
+            color: #000000;
+            
+        }
+
+        @keyframes apparition{
+            0% {
+                opacity:0;
+                transform: translateY(-20px);
+            }
+            100% {
+                opacity:1;
+                transform: translateY(0);
+            }
+        }
+        input{
+            padding: 13px;
+            border-radius:10px;
+            background-color: rgb(11, 50, 49);
+            opacity: 0;
+            animation: apparition 1s ease-in-out forwards;
+            margin-left: 500px;
+        }
+        input:nth-child(1){
+            animation-delay: 0s;
+        }
+
+        input:nth-child(2){
+            animation-delay: 0.5s;
+        }
+        input:nth-child(3){
+            animation-delay: 1s;
+        }
+        input:nth-child(4){
+            animation-delay: 1.5s;
+        }
+        button{
+            padding: 12px;
+            border-radius:10px;
+            background-color: #dc5704;
+            padding-top: 15px;
+            transition: transform 0.5s ease-in-out;
+            margin-left: 100px;
+
+
+        }
+        button:hover{
+            transform: scale(1.2);
+
+        }
+        .R1{
+            padding: 10px;
+           
+        }
+       /* .article1__image{
+            margin-left:20px ;
+            border:none;
+            border-radius: 10px;
+            box-shadow: 2px 0px 4px #000000;
+            cursor:pointer;
+        }
+        .article2_text{
+            margin-left: auto;
+        }*/
+
+        .senku{   
+            display: flex;
+        }
+
+        .ravaka{
+           margin-left: 50px;
+          
+        }
+        #text1{
+            font-size: 20px;
+            color: darkturquoise;
+        }
+        #text2{
+            font-size: 20px;
+            color: darkturquoise;
+        }
+        
+        
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+        .stl{
+            width: 80px;
+        }
+        #text3{
+            font-size: 20px;
+            color: darkturquoise;
+        }
+        #text4{
+            font-size: 20px;
+            color: darkturquoise;
+        }
+        #text5{
+            font-size: 20px;
+            color: darkturquoise;
+        }
+        #resultat{
+            font-size: 40px;
+            color: rgb(21, 191, 214);
+            margin-top: 60px;
+        }
+        #resultat_tension{
+            font-size: 20px;
+            color: gold;
+        }
+        #resultat_intensite{
+            font-size: 20px;
+            color: gold ;
+        }
+
+    </style>
+
+    <h2>CIRCUIT ELECTRIQUE</h2>
+    <p class=" sitraka">Saisir dans chaque case les valeurs que vous voulez ajouter :</p>
+
+   
+    <div class="senku">
+        <div>
+        <img  class="ravaka"  src="schema.png" alt="schéma du circuit" width="500" height="350">
+
+        <div class="text1" id="text1"></div>
+        <div class="text2" id="text2"></div>
+        <div class="text3" id="text3"></div>
+        <div class="text4" id="text4"></div>
+        <div class="text5" id="text5"></div>
+        <div class="resultat" id="resultat"></div>
+        <div class="resultat_tension" id="resultat_tension"></div>
+        <div class="resultat_intensite" id="resultat_intensite"></div>
+        <h3 id="resultat" class="resultat"></h3>
+
+
+    </div>
+
+   
+   <div>
+
+   <p>Valeur de E :</p>
+    <input type="number" id="E" placeholder="E">
+    <p>Valeur de R1 :</p>
+
+    <input type="number" id="R1" placeholder="R1">
+    <p>Valeur de R2 :</p>
+
+    <input type="number" id="R2" placeholder="R2">
+    <p>Valeur de R3 :</p>
+
+    <input type="number" id="R3" placeholder="R3">
+    <p>Valeur de R4 :</p>
+
+    <input type="number" id="R4" placeholder="R4">
+</div>
+
+</div>
+
+<div class="sol">
+<button onclick="calculate()" class="solution">Calculer</button>
+<button class="stl" ><a  href="Model Bascule d'article.html">Back</a></button>
+</div>
+</article>
+
+    <script src="Circuits.js">
+</script>
+</div>
+</body>
+</html>

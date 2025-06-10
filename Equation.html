@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equation</title>
+    <link rel="stylesheet" href="Equation.css">
+</head>
+<body>
+    <style>
+        body{
+            background-image: url('eee.jpg');
+            background-repeat: no-repeat;
+            text-align: center;
+            margin-top: auto;
+            margin-right: 0px;
+            margin-left: 0px;
+
+        }
+        @keyframes fadeInPhrase {
+          
+            from { opacity : 0; transform: translateY(50px);}
+            to { opacity : 1; transform: translateY(0);}
+
+
+        }
+
+        h2{
+            color: aliceblue;
+            font-size: 50px;
+            font-family: italic;
+            color: rgb(177, 97, 22);
+            opacity: 0;
+            animation: fadeInPhrase 3s forwards;
+           
+        }
+
+       
+        p1{
+            
+            font-size: 30px;
+            font-style: italic;
+            color: rgb(0, 0, 0);
+        }
+        p2{
+            color: aliceblue;
+            font-size: 30px;
+            font-style: italic;
+            color: rgb(0, 0, 0);
+        }
+        .a{
+            padding: 10px;
+            transition: transform 0.3s ease-in-out;
+        
+           
+        }
+        @keyframes apparition{
+            0% {
+                opacity:0;
+                transform: translateY(-20px);
+            }
+            100% {
+                opacity:1;
+                transform: translateY(0);
+            }
+        }
+       
+        input{
+            padding: 13px;
+            border-radius:10px;
+            background-color:rgb(11, 50, 49) ;
+            opacity: 0;
+            animation: apparition 2s ease-in-out forwards;
+        }
+         
+        input:nth-child(1){
+            animation-delay: 0.5s;
+        }
+
+        input:nth-child(2){
+            animation-delay: 1s;
+        }
+        input:nth-child(3){
+            animation-delay: 2s;
+        }
+        
+        button{
+            padding: 12px;
+            border-radius:10px;
+            background-color:  #8f540d;
+            padding-top: 15px;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        p{
+            font-size: 18px;
+            font-style: italic;
+            color: #c0cf19;
+        }
+
+        button:hover{
+           transform: scale(1.2);
+        }
+        
+        #result{
+            font-size: 30px;
+            color: rgb(3, 2, 79);
+            margin-top: 80px;
+        }
+
+        tsiaro{
+            display: flex;
+            margin-top: 100px;
+        }
+         
+       
+        #result0{
+            font-size: 30px;
+            color: rgb(188, 207, 41);
+        }
+       
+    </style>
+    <h2>EQUATION DU SECONDE DEGREE</h2>
+        <P1>L'équation est de la forme ax<sup>2</sup>+bx+c</P1><br>
+        <p2>Saisir dans chaque case les valeurs que vous voulez ajouter :</p2>
+
+        <div class="div">
+    <div class="a">
+        <p>Valeur de a :</p>
+        <input type="number" id="a" placeholder="a">
+        <p>Valeur de b :</p>
+        <input type="number" id="b" placeholder="b">
+        <p>Valeur de c :</p>
+        <input type="number" id="c"placeholder="c">
+    </div>   
+        
+    <div class="sol">
+        <button onclick="calculate()" class="solution">Calculer</button>
+       
+   </div>
+  
+   <div class="tsiaro">
+  
+   
+       <div class="result0" id="result0"></div>
+       <div class="result" id="result"></div>
+      
+    
+    </div>
+   
+          <script src="second.js">
+
+          </script>
+   
+    </body>
+</html>
+  
+
+   
+
+   
+
+    
+  
+ 
